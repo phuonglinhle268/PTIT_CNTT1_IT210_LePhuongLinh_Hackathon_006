@@ -37,7 +37,7 @@
             <img th:src="@{'/images/' + ${currentImage}}" width="100"/>
         </div>
         <input type="file" th:field="*{image}" class="form-control" name="" id="">
-        <p class="error" th:errors="*{flightNumber}"></p>
+        <p class="error" th:errors="*{image}"></p>
     </div>
     <div>
         <button type="submit" class="btn btn-primary">Lưu</button>

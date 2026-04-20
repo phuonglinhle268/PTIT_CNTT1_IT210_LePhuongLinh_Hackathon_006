@@ -1,8 +1,6 @@
 package org.example.java_web_hackathon.dto;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
@@ -16,7 +14,8 @@ public class FlightDTO {
     @NotBlank(message = "Điểm đến không được để trống")
     private String destination;
 
-    @Size(min = 100, max = 10000, message = "Giá trị phải tử 100.0 đến 10,000.0")
+    @DecimalMin(value = "100.0", message = "Giá trị phải từ 100.0 đến 10,000.0")
+    @DecimalMax(value = "10000.0", message = "Giá trị phải từ 100.0 đến 10,000.0")
     private Double ticketPrice;
 
     private MultipartFile image;
