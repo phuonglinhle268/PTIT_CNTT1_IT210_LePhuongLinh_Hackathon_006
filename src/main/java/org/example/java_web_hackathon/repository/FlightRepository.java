@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class FlightRepository {
+public class gFlightRepository {
     List<Flight> list = new ArrayList<>();
 
     public List<Flight> findAll(){
